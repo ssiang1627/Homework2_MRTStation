@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0467EC7C1CDB2C0F00960D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467EC7B1CDB2C0F00960D6E /* AppDelegate.swift */; };
-		0467EC7E1CDB2C0F00960D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467EC7D1CDB2C0F00960D6E /* ViewController.swift */; };
 		0467EC811CDB2C0F00960D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467EC7F1CDB2C0F00960D6E /* Main.storyboard */; };
 		0467EC831CDB2C0F00960D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467EC821CDB2C0F00960D6E /* Assets.xcassets */; };
 		0467EC861CDB2C0F00960D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467EC841CDB2C0F00960D6E /* LaunchScreen.storyboard */; };
 		0467EC8E1CDB4BAC00960D6E /* MRT.json in Resources */ = {isa = PBXBuildFile; fileRef = 0467EC8D1CDB4BAC00960D6E /* MRT.json */; };
+		04EADE651CF30548007F32F7 /* MRTStationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EADE641CF30548007F32F7 /* MRTStationData.swift */; };
+		04EADE671CF31F4D007F32F7 /* MRTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EADE661CF31F4D007F32F7 /* MRTTableViewCell.swift */; };
+		04EADE691CF327C3007F32F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467EC7B1CDB2C0F00960D6E /* AppDelegate.swift */; };
+		04EADE6A1CF3288B007F32F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467EC7D1CDB2C0F00960D6E /* ViewController.swift */; };
+		04EADE6C1CF32D8C007F32F7 /* SingleLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EADE6B1CF32D8C007F32F7 /* SingleLineViewController.swift */; };
+		04EADE6E1CF32E96007F32F7 /* DualLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EADE6D1CF32E96007F32F7 /* DualLineViewController.swift */; };
 		4997D8535F49777D4E73DC08 /* Pods_MRTStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4B2B2448BB01A42BF6FB8C /* Pods_MRTStation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		0467EC851CDB2C0F00960D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0467EC871CDB2C0F00960D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0467EC8D1CDB4BAC00960D6E /* MRT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MRT.json; sourceTree = "<group>"; };
+		04EADE641CF30548007F32F7 /* MRTStationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTStationData.swift; sourceTree = "<group>"; };
+		04EADE661CF31F4D007F32F7 /* MRTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTTableViewCell.swift; sourceTree = "<group>"; };
+		04EADE6B1CF32D8C007F32F7 /* SingleLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLineViewController.swift; sourceTree = "<group>"; };
+		04EADE6D1CF32E96007F32F7 /* DualLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualLineViewController.swift; sourceTree = "<group>"; };
 		0C4B2B2448BB01A42BF6FB8C /* Pods_MRTStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		255E656FE335FC4F25BAEE4B /* Pods-MRTStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRTStation/Pods-MRTStation.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5758636518F9413945C56D /* Pods-MRTStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRTStation/Pods-MRTStation.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,8 +72,12 @@
 		0467EC7A1CDB2C0F00960D6E /* MRTStation */ = {
 			isa = PBXGroup;
 			children = (
+				04EADE641CF30548007F32F7 /* MRTStationData.swift */,
+				04EADE6B1CF32D8C007F32F7 /* SingleLineViewController.swift */,
+				04EADE6D1CF32E96007F32F7 /* DualLineViewController.swift */,
 				0467EC7B1CDB2C0F00960D6E /* AppDelegate.swift */,
 				0467EC7D1CDB2C0F00960D6E /* ViewController.swift */,
+				04EADE661CF31F4D007F32F7 /* MRTTableViewCell.swift */,
 				0467EC7F1CDB2C0F00960D6E /* Main.storyboard */,
 				0467EC821CDB2C0F00960D6E /* Assets.xcassets */,
 				0467EC841CDB2C0F00960D6E /* LaunchScreen.storyboard */,
@@ -215,8 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0467EC7E1CDB2C0F00960D6E /* ViewController.swift in Sources */,
-				0467EC7C1CDB2C0F00960D6E /* AppDelegate.swift in Sources */,
+				04EADE691CF327C3007F32F7 /* AppDelegate.swift in Sources */,
+				04EADE651CF30548007F32F7 /* MRTStationData.swift in Sources */,
+				04EADE6C1CF32D8C007F32F7 /* SingleLineViewController.swift in Sources */,
+				04EADE6A1CF3288B007F32F7 /* ViewController.swift in Sources */,
+				04EADE6E1CF32E96007F32F7 /* DualLineViewController.swift in Sources */,
+				04EADE671CF31F4D007F32F7 /* MRTTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

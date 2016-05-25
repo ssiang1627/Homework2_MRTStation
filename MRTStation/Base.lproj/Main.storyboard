@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--MRTStationViewController-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MRTStationViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MRTStation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MRTStationViewController" id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" customModule="MRTStation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,47 +19,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tA-q61">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TRy-tA-q61">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IXH-3s-p9O">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MRT Station Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MRTStationCell" id="IXH-3s-p9O" userLabel="MRT Station Cell" customClass="MRTTableViewCell" customModule="MRTStation" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IXH-3s-p9O" id="6hi-Zc-yEb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-BK-OES">
-                                                    <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-BK-OES" userLabel="Station Name Label">
+                                                    <rect key="frame" x="16" y="11" width="128" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-q4-AtH">
-                                                    <rect key="frame" x="416" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-q4-AtH" userLabel="Line Label 1">
+                                                    <rect key="frame" x="322" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-sq-IA1">
-                                                    <rect key="frame" x="506" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-sq-IA1" userLabel="Line Label 2">
+                                                    <rect key="frame" x="249" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-YV-lHZ" userLabel="Line Number Label1">
+                                                    <rect key="frame" x="467" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-0u-pzy" userLabel="Line Number Label2">
+                                                    <rect key="frame" x="527" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="H5c-0u-pzy" firstAttribute="width" secondItem="6hi-Zc-yEb" secondAttribute="width" multiplier="1:8" id="0jo-cF-3Lh"/>
+                                                <constraint firstItem="KMU-YV-lHZ" firstAttribute="width" secondItem="6hi-Zc-yEb" secondAttribute="width" multiplier="1:8" id="FdZ-Q7-WZO"/>
+                                                <constraint firstItem="KMU-YV-lHZ" firstAttribute="centerY" secondItem="6hi-Zc-yEb" secondAttribute="centerY" id="Jf2-FA-UFY"/>
+                                                <constraint firstItem="H5c-0u-pzy" firstAttribute="centerY" secondItem="6hi-Zc-yEb" secondAttribute="centerY" id="Mcm-AD-6Re"/>
+                                                <constraint firstAttribute="trailing" secondItem="H5c-0u-pzy" secondAttribute="trailing" constant="100" id="PRa-1j-1xI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KMU-YV-lHZ" secondAttribute="trailing" constant="30" id="T3d-88-Zk1"/>
+                                                <constraint firstItem="DlM-BK-OES" firstAttribute="centerY" secondItem="6hi-Zc-yEb" secondAttribute="centerY" id="eHN-JG-rYx"/>
+                                                <constraint firstItem="DlM-BK-OES" firstAttribute="height" secondItem="6hi-Zc-yEb" secondAttribute="height" multiplier="1:10" id="g58-Ah-KCQ"/>
+                                                <constraint firstItem="DlM-BK-OES" firstAttribute="leading" secondItem="6hi-Zc-yEb" secondAttribute="leading" constant="10" id="hHG-hD-LxP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lineLabel1" destination="hWs-q4-AtH" id="EwE-Zy-6aW"/>
+                                            <outlet property="lineLabel2" destination="5bt-sq-IA1" id="xJS-aL-oTv"/>
+                                            <outlet property="lineNumberLabel1" destination="KMU-YV-lHZ" id="ob1-GU-jcq"/>
+                                            <outlet property="lineNumberLabel2" destination="H5c-0u-pzy" id="G5d-7g-o3Q"/>
+                                            <outlet property="stationNameLabel" destination="DlM-BK-OES" id="Wp3-gv-MSb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RJL-ez-7qH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ccf-Ds-Wys"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TRy-tA-q61" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ywk-uu-fHd"/>
+                            <constraint firstItem="TRy-tA-q61" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="dfS-Rx-TFD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MRT Station" id="6cm-oi-a5z"/>
                     <connections>
-                        <segue destination="iFs-TN-bbP" kind="show" id="T03-m0-hmJ"/>
-                        <segue destination="tAe-7M-zba" kind="show" id="QlL-bO-czy"/>
+                        <outlet property="MRTTableView" destination="TRy-tA-q61" id="azf-rN-ss9"/>
+                        <segue destination="iFs-TN-bbP" kind="show" identifier="SingleLine" id="yim-ga-fah"/>
+                        <segue destination="tAe-7M-zba" kind="show" identifier="DualLine" id="irt-eS-x07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +108,7 @@
         <!--SingleLineViewController-->
         <scene sceneID="ZL0-gs-xhe">
             <objects>
-                <viewController title="SingleLineViewController" id="iFs-TN-bbP" sceneMemberID="viewController">
+                <viewController title="SingleLineViewController" id="iFs-TN-bbP" customClass="SingleLineViewController" customModule="MRTStation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="paA-kF-piK"/>
                         <viewControllerLayoutGuide type="bottom" id="dmV-Dk-DYb"/>
@@ -76,21 +117,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjn-IC-Tqe">
-                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjn-IC-Tqe" userLabel="Station Name Label">
+                                <rect key="frame" x="279" y="107" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-jZ-HqG">
-                                <rect key="frame" x="279" y="57" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-jZ-HqG" userLabel="Line Label">
+                                <rect key="frame" x="279" y="149" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qjn-IC-Tqe" firstAttribute="top" secondItem="paA-kF-piK" secondAttribute="bottom" constant="50" id="H1F-Gq-SGc"/>
+                            <constraint firstItem="Hz7-jZ-HqG" firstAttribute="width" secondItem="sgj-rL-33o" secondAttribute="width" id="H2P-Yn-j4r"/>
+                            <constraint firstItem="Hz7-jZ-HqG" firstAttribute="centerX" secondItem="sgj-rL-33o" secondAttribute="centerX" id="bUP-YJ-GvM"/>
+                            <constraint firstItem="qjn-IC-Tqe" firstAttribute="centerX" secondItem="sgj-rL-33o" secondAttribute="centerX" id="hz8-PE-7Te"/>
+                            <constraint firstItem="Hz7-jZ-HqG" firstAttribute="top" secondItem="qjn-IC-Tqe" secondAttribute="bottom" constant="30" id="lEi-oJ-EXb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lineLabel" destination="Hz7-jZ-HqG" id="2sq-Zq-JLk"/>
+                        <outlet property="stationNameLabel" destination="qjn-IC-Tqe" id="afY-4y-gA4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlc-W7-j91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +151,7 @@
         <!--DualLineViewController-->
         <scene sceneID="wZo-Ls-XJA">
             <objects>
-                <viewController title="DualLineViewController" id="tAe-7M-zba" sceneMemberID="viewController">
+                <viewController title="DualLineViewController" id="tAe-7M-zba" customClass="DualLineViewController" customModule="MRTStation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZE8-Zu-7sr"/>
                         <viewControllerLayoutGuide type="bottom" id="fM4-Eb-v62"/>
@@ -108,27 +160,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-7V-sSd">
-                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-7V-sSd" userLabel="Station Name Label">
+                                <rect key="frame" x="279" y="90" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-db-FNk">
-                                <rect key="frame" x="154" y="76" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-db-FNk" userLabel="Line Label 1">
+                                <rect key="frame" x="155" y="134" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71q-gL-ibn">
-                                <rect key="frame" x="441" y="76" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71q-gL-ibn" userLabel="Line Label 2">
+                                <rect key="frame" x="444" y="134" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9NW-7V-sSd" firstAttribute="centerX" secondItem="DUQ-bH-Jkp" secondAttribute="centerX" id="3rA-T5-RFb"/>
+                            <constraint firstItem="9NW-7V-sSd" firstAttribute="top" secondItem="ZE8-Zu-7sr" secondAttribute="bottom" constant="50" id="N1M-pl-6ef"/>
+                            <constraint firstItem="KVy-db-FNk" firstAttribute="width" secondItem="DUQ-bH-Jkp" secondAttribute="width" multiplier="1:2" id="QH6-dj-mDp"/>
+                            <constraint firstItem="71q-gL-ibn" firstAttribute="width" secondItem="DUQ-bH-Jkp" secondAttribute="width" multiplier="1:2" id="QnV-56-A3f"/>
+                            <constraint firstItem="KVy-db-FNk" firstAttribute="top" secondItem="ZE8-Zu-7sr" secondAttribute="bottom" constant="30" id="ibI-G4-weh"/>
+                            <constraint firstAttribute="trailing" secondItem="71q-gL-ibn" secondAttribute="trailing" id="mCC-GX-wIb"/>
+                            <constraint firstItem="KVy-db-FNk" firstAttribute="top" secondItem="9NW-7V-sSd" secondAttribute="bottom" constant="30" id="nmc-HI-zRq"/>
+                            <constraint firstItem="71q-gL-ibn" firstAttribute="top" secondItem="9NW-7V-sSd" secondAttribute="bottom" constant="30" id="rfR-nA-eyG"/>
+                            <constraint firstItem="71q-gL-ibn" firstAttribute="top" secondItem="ZE8-Zu-7sr" secondAttribute="bottom" constant="30" id="ryz-ae-Xxv"/>
+                            <constraint firstItem="KVy-db-FNk" firstAttribute="leading" secondItem="DUQ-bH-Jkp" secondAttribute="leading" id="tx9-si-bWv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ibI-G4-weh"/>
+                                <exclude reference="ryz-ae-Xxv"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="lineLabel1" destination="KVy-db-FNk" id="yXp-Uh-ZuT"/>
+                        <outlet property="lineLabel2" destination="71q-gL-ibn" id="Hk8-3T-Eqd"/>
+                        <outlet property="stationNameLabel" destination="9NW-7V-sSd" id="FLF-yG-jfU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lq9-tM-MSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
