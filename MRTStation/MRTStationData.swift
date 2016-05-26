@@ -144,7 +144,7 @@ class StationData {
         let beitoArray = Station(lineName: "新北投支線", stationName: beito, stationNumber: beitoNumber, stationDetail: beitoLineName)
         let xindianArray = Station(lineName: "松山新店線", stationName: xindian, stationNumber: xindianNumber, stationDetail: xindianLineName)
         let bitanArray = Station(lineName: "小碧潭支線", stationName: bitan, stationNumber: bitanNumber, stationDetail: bitanLineName)
-        let shinruArray = Station(lineName: "中和新蘆線", stationName: shinru, stationNumber: shinruNumber, stationDetail: shinruNumber)
+        let shinruArray = Station(lineName: "中和新蘆線", stationName: shinru, stationNumber: shinruNumber, stationDetail: shinruLineName)
         let bennanArray = Station(lineName: "板南線", stationName: bennan, stationNumber: bennanNumber, stationDetail: bennanLineName)
         let moukunArray = Station(lineName: "貓空纜車", stationName: moukun, stationNumber: moukunNumber, stationDetail: moukunLineName)
         stationData.append(wenhuArray)
